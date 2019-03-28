@@ -1,8 +1,10 @@
 <template>
 <div>
+    <!-- <navbar/>  este navbar viene de abajo, lo que se importó -->
     <h1>Hola {{ msg }}</h1> <!-- con las llaves se indica que ahi va condigo javascript. Solo puede haber un elemento padre -->
     <input type="text" v-model="msg"> <!-- Lo enlazado de conecta -->
-    <button @click="guardar">Guardar</button>
+    <button @click="guardar" class="btn btn-primary">Guardar</button>
+    <b-button variant="primary">Guardar</b-button>
     <table>
         <tr>
             <th>Nombre</th>
@@ -15,13 +17,18 @@
 </template>
 
 <script>
+//import navbar from '../Components/navbar'
+//import contacto from './contacto'
+
 export default{
+   // components: {navbar},
+
     data(){
         return{
             msg: "Alexis López",
             municipios: ['Mocoa', 'Villagarzon', 'Pto Asis']
 
-        }
+        };
     },
     methods: {
         guardar(){
